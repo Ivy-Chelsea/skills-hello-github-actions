@@ -1,6 +1,16 @@
 name: Post welcome comment
+# Gives workflow a name that will appear on any pull request
+# Or in the action tab of repo
 on:
   pull_request:
     types: [opened]
+    # Indicates that action will execute anytime
+    # pull request is opened on repo
 permissions:
+# Assigns workflow permissions to operate on repo
   pull-requests: write
+  # Gives workflow permission to write to pull requst
+jobs:
+  build:
+    name: Post welcome comment
+    runs-on: ubuntu-latest
